@@ -1,5 +1,7 @@
 package models
 
 type Tag struct {
-	TagName string
+	ID      uint   `gorm:"primaryKey"`
+	TagName string `gorm:"unique;not null"`
+	Posts   []Post `gorm:"many2many:post_tags;"`
 }
