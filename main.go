@@ -4,10 +4,15 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/RMarmolejo90/cooking_app/internal/database"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
+
+	// attempt database connection
+	database.ConnectDB()
+
 	r := gin.Default()
 
 	// Ping test
