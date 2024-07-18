@@ -1,8 +1,5 @@
 package models
 
-import (
-	"gorm.io/gorm"
-)
 
 type Gallery struct {
 	ID       uint   `gorm:"primaryKey"`
